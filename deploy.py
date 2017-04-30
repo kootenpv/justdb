@@ -18,10 +18,10 @@ version = '{}.{}.{}'.format(major, minor, micro)
 with open('setup.py', 'w') as f:
     f.write(setup)
 
-with open('just/__init__.py') as f:
+with open('justdb/__init__.py') as f:
     init = f.read()
 
-with open('just/__init__.py', 'w') as f:
+with open('justdb/__init__.py', 'w') as f:
     f.write(
         re.sub('__version__ = "[0-9.]+"',
                '__version__ = "{}"'.format(version), init))
