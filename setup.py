@@ -16,7 +16,7 @@ setup(name='justdb',
           'pyzmq', 'just'
       ],
       entry_points={
-          'console_scripts': ['justdb = justdb.server:create_server']
+          'console_scripts': ['justdb = justdb.__main__:main']
       },
       classifiers=[
           'Intended Audience :: Developers',

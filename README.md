@@ -60,6 +60,10 @@ result = j.execute(my_read)
 
 Like this, you will be faster than Redis.
 
+### Stop the server
+
+    justdb kill
+
 ### Warning
 
 Note that whatever function you will use with `j.execute()` (or with `j` in general), you can be assured that it will be the only function running (well, using `JustDB`, if you write without justdb to the same files, good luck).

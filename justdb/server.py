@@ -1,5 +1,5 @@
-import zmq
 import sys
+import zmq
 
 
 def create_server():
@@ -12,9 +12,10 @@ def create_server():
         freeze_socket = context.socket(zmq.REP)
         freeze_socket.bind("tcp://*:6666")
     except zmq.error.ZMQError:
-        print("JustDB already running")
+        print("JustDB already running, this is no error.")
         sys.exit()
 
+    print("Successfully started \033[92mjustdb\033[0m")
     while True:  # pragma: no cover
         _ = main_socket.recv()
         main_socket.send(b"")

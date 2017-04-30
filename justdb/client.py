@@ -10,7 +10,7 @@ class JustDB():
         context = zmq.Context()
 
         # try to start server in background
-        os.system("justdb &")
+        os.system("justdb serve &")
 
         main_socket = context.socket(zmq.REQ)
         main_socket.connect("tcp://localhost:5555")
