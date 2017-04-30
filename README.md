@@ -9,7 +9,7 @@
 
 It is thread/process safe, without strain for the developer.
 
-Also, to find more capabilities, read about [just](https://github.com/kootenpv/just).
+For more capabilities, also read here: [just](https://github.com/kootenpv/just).
 
 ### Installation
 
@@ -39,11 +39,11 @@ def my_read():
 result = j.execute(my_read)
 ```
 
-Like this, you will be faster than Redis. Note that whatever function you will put here, you can be assured that it will be the only function running (well, using `JustDB`).
+Like this, you will be faster than Redis.
 
 ### Warning
 
-Note that if you do writes/reads outside of using the JustDB, you can still get into race conditions.
+Note that whatever function you will use with `j.execute()` (or with `j` in general), you can be assured that it will be the only function running (well, using `JustDB`, if you write without justdb to the same files, good luck).
 
 ## root path
 
