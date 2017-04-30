@@ -15,7 +15,7 @@ def create_server():
         print("JustDB already running")
         sys.exit()
 
-    while True:
+    while True:  # pragma: no cover
         _ = main_socket.recv()
         main_socket.send(b"")
 

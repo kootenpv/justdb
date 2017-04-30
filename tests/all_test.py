@@ -13,3 +13,11 @@ def test_fallback():
     j = JustDB()
     fallback = "value if not exist"
     assert j.read("some/path/1", fallback) == fallback
+
+
+def test_server():
+    from justdb.server import create_server
+    try:
+        create_server()
+    except SystemExit:
+        pass

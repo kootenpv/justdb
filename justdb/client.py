@@ -15,14 +15,14 @@ class JustDB():
         main_socket = context.socket(zmq.REQ)
         main_socket.connect("tcp://localhost:5555")
 
-        # print("Connecting to write server…")
+        # print("Connecting to write server")
         freeze_socket = context.socket(zmq.REQ)
         freeze_socket.connect("tcp://localhost:6666")
 
         self.main_socket = main_socket
         self.freeze_socket = freeze_socket
 
-    def execute(self, fn=lambda: print("reading")):
+    def execute(self, fn):
         self.main_socket.send(b"")
         _ = self.main_socket.recv()
         return_value = None
