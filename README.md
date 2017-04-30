@@ -1,6 +1,6 @@
-## just
+## justdb
 
-[![Build Status](https://travis-ci.org/kootenpv/just.svg?branch=master)](https://travis-ci.org/kootenpv/justdb)
+[![Build Status](https://travis-ci.org/kootenpv/justdb.svg?branch=master)](https://travis-ci.org/kootenpv/justdb)
 [![Coverage Status](https://coveralls.io/repos/github/kootenpv/justdb/badge.svg?branch=master)](https://coveralls.io/github/kootenpv/justdb?branch=master)
 [![PyPI](https://img.shields.io/pypi/v/justdb.svg?style=flat-square)](https://pypi.python.org/pypi/justdb/)
 [![PyPI](https://img.shields.io/pypi/pyversions/justdb.svg?style=flat-square)](https://pypi.python.org/pypi/justdb/)
@@ -9,6 +9,7 @@
 
 It is thread/process safe, without strain for the developer.
 
+Also, to find more capabilities, read about [just](https://github.com/kootenpv/just).
 
 ### Installation
 
