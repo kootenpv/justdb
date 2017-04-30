@@ -31,13 +31,13 @@ print(j["bla.json"])
 # remove file
 j.remove("bla.json")
 
-# also works with other extension. See [supported types](https://github.com/kootenpv/just/blob/master/just/__init__.py#L28)
+# also works with other extension **.
 j["some/folder/bla.yml"] = {"a": 1}
 print(j["some/folder/bla.yml"])
 # {"a": 1}
 ```
 
-It will create a folder
+** See [supported types](https://github.com/kootenpv/just/blob/master/just/__init__.py#L28).
 
 ### SPEED
 
