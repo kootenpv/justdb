@@ -20,8 +20,20 @@ For more capabilities, also read here: [just](https://github.com/kootenpv/just).
 ```python
 from justdb import JustDB
 j = JustDB()
-j["some/folder/bla.json"] = {"a": 1}
-print(j["some/folder/bla.json"])
+
+# write to file (serialization based on filename)
+j["bla.json"] = {"a": 1}
+
+# read file (deserialization based on filename)
+print(j["bla.json"])
+# {"a": 1}
+
+# remove file
+j.remove("bla.json")
+
+# also works with other extension. See [supported types](https://github.com/kootenpv/just/blob/master/just/__init__.py#L28)
+j["some/folder/bla.yml"] = {"a": 1}
+print(j["some/folder/bla.yml"])
 # {"a": 1}
 ```
 
