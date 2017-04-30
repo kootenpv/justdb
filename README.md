@@ -13,11 +13,12 @@ Also, to find more capabilities, read about [just](https://github.com/kootenpv/j
 
 ### Installation
 
-pip install justdb
+    pip install justdb
 
 ## Using justdb
 
 ```python
+from justdb import JustDB
 j = JustDB()
 j["some/folder/bla.json"] = {"a": 1}
 print(j["some/folder/bla.json"])
