@@ -7,7 +7,14 @@
 
 ### Why
 
-It is thread/process safe, without strain for the developer.
+`justdb` is a thread/process safe, file-based database, without strain for the developer.
+
+The interesting thing is that there will be a _detached_ process which
+will receive requests through ZeroMQ. This process will ensure only 1
+thread or process can write at a time. Even external processes.
+
+The process will however not write data to files itself, it only communicates permission.
+Like this, you can make it safe to write/read to a filesystem, and benefit from great speed.
 
 For more capabilities, also read here: [just](https://github.com/kootenpv/just).
 

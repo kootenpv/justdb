@@ -8,7 +8,7 @@ VERSION = "{}.{}.{}".format(MAJOR_VERSION, MINOR_VERSION, MICRO_VERSION)
 
 setup(name='justdb',
       version=VERSION,
-      description="Just thread/process-safe, file-based, fast, database.",
+      description="Just a thread/process-safe, file-based, fast, database.",
       author='Pascal van Kooten',
       url='https://github.com/kootenpv/justdb',
       author_email='kootenpv@gmail.com',
