@@ -60,6 +60,10 @@ result = j.execute(my_read)
 
 Like this, you will be faster than Redis.
 
+## root path
+
+It will search for a `.just` file to consider as root, upwards.
+
 ### Stop the server
 
     justdb kill
@@ -68,6 +72,6 @@ Like this, you will be faster than Redis.
 
 Note that whatever function you will use with `j.execute()` (or with `j` in general), you can be assured that it will be the only function running (well, using `JustDB`, if you write without justdb to the same files, good luck).
 
-## root path
+### Status
 
-It will search for a `.just` file to consider as root, upwards.
+Proof-of-concept. Please leave some feedback about which direction you'd like to see this go.
