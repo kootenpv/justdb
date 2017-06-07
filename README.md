@@ -58,7 +58,7 @@ def my_read():
 result = j.execute(my_read)
 ```
 
-Like this, you will be faster than Redis.
+Like this, ~~you will be faster than Redis~~. UPDATE: I was comparing against docker performance!
 
 ## root path
 
