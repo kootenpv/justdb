@@ -26,7 +26,7 @@ For more capabilities, also read here: [just](https://github.com/kootenpv/just).
 
 ```python
 from justdb import JustDB
-j = JustDB()
+j = JustDB()   # paths will be relative to here, or if a .just file can be found
 
 # write to file (serialization based on filename)
 j["bla.json"] = {"a": 1}
@@ -48,17 +48,7 @@ print(j["some/folder/bla.yml"])
 
 ### SPEED
 
-Ok, `just` is rather slow. If you want to do fast writing without file extension and file existance checks:
-
-```python
-import ujson
-def my_read():
-    with open("some.json") as f:
-        return ujson.load(f)
-result = j.execute(my_read)
-```
-
-Like this, ~~you will be faster than Redis~~. UPDATE: I was comparing against docker performance!
+UPDATE: I was comparing against redis docker performance!
 
 ## root path
 
