@@ -22,28 +22,25 @@ class JustDB():
         self.main_socket = main_socket
         self.freeze_socket = freeze_socket
 
-    def execute(self, fn):
+    def execute(self, fn, *args, **kwargs):
         self.main_socket.send(b"")
         _ = self.main_socket.recv()
         return_value = None
         try:
-            return_value = fn()
+            return_value = fn(*args, **kwargs)
         finally:
             self.freeze_socket.send(b"")
             _ = self.freeze_socket.recv()
         return return_value
 
-    def read(self, fname, no_exist=None, fallback_type="RAISE"):
-        fn = lambda: just.read(fname, no_exist, fallback_type)
-        return self.execute(fn)
+    def read(self, fname, no_exist=None, unknown_type="RAISE"):
+        return self.execute(just.read, fname, no_exist, unknown_type)
 
     def write(self, obj, fname, mkdir_no_exist=True, skip_if_exist=False):
-        fn = lambda: just.write(obj, fname, mkdir_no_exist, skip_if_exist)
-        return self.execute(fn)
+        return self.execute(just.write, obj, fname, mkdir_no_exist, skip_if_exist)
 
     def remove(self, fname, no_exist=None):
-        fn = lambda: just.remove(fname, no_exist)
-        return self.execute(fn)
+        return self.execute(just.remove, fname, no_exist)
 
     def __getitem__(self, k):
         return self.read(k)
